@@ -1,0 +1,152 @@
+/* Charity: water Brand Colors
+
+Primary Colors:
+- Yellow:     #FFC907
+- Blue:       #2E9DF7
+
+Secondary Colors:
+- Light Blue: #8BD1CB
+- Green:      #4FCB53
+- Orange:     #FF902A
+- Red:        #F5402C
+- Dark Green: #159A48
+- Pink:       #F16061
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #8BD1CB;
+    color: #333;
+    padding: 20px;
+}
+
+/* HEADER */
+
+header {
+    background-color: #FFC907;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.header-logo {
+    width: 250px;
+    max-width: 90%;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* SCORE */
+
+.game-info {
+    background-color: white;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    padding: 15px;
+    border-radius: 12px;
+    color: #2E9DF7;
+    font-weight: bold;
+}
+
+/* GAME AREA */
+
+.game-board {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* PLAYER */
+
+.player {
+    margin-bottom: 15px;
+}
+
+#player-image {
+    width: 120px;
+    transition: all 0.3s ease;
+}
+
+/* BUTTONS */
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.path {
+    background-color: #4FCB53;
+    color: white;
+}
+
+.obstacle {
+    background-color: #F5402C;
+    color: white;
+}
+
+.goal {
+    background-color: #2E9DF7;
+    color: white;
+    font-weight: bold;
+}
+
+.reset-btn {
+    background-color: #FF902A;
+    color: white;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* FEEDBACK */
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 35px;
+    color: #159A48;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .game-board {
+        width: 95%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .header-logo {
+        width: 180px;
+    }
+}

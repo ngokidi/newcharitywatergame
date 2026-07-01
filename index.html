@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropy: Clean Water Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img
+            src="img/cw_logo_horizontal.png"
+            alt="charity: water logo"
+            class="header-logo"
+        >
+
+        <h1>Dropy: Clean Water Quest</h1>
+        <p>Help deliver clean water and avoid pollution!</p>
+    </header>
+
+    <section class="game-info">
+        <h2>Score: <span id="score">0</span></h2>
+    </section>
+
+    <main class="game-board">
+
+        <div class="player">
+            <img
+                src="img/water-can-transparent.png"
+                alt="Water Can"
+                id="player-image"
+            >
+        </div>
+
+        <button class="path" onclick="gainPoints()">
+            ➡️ Move Forward
+        </button>
+
+        <button class="obstacle" onclick="losePoints()">
+            🗑️ Avoid Trash
+        </button>
+
+        <button class="obstacle" onclick="losePoints()">
+            ☣️ Polluted Water
+        </button>
+
+        <button class="goal" onclick="reachGoal()">
+            🚰 Reach Clean Water
+        </button>
+
+    </main>
+
+    <div id="message">
+        💧 Click "Move Forward" to begin your journey!
+    </div>
+
+    <button class="reset-btn" onclick="resetGame()">
+        Restart Game
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
