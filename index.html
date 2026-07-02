@@ -3,45 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Dropy: Clean Water Quest</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header>
+
         <img
             src="img/cw_logo_horizontal.png"
             alt="charity: water logo"
             class="header-logo"
         >
 
-        <h1>Dropy: Clean Water Quest</h1>
-        <p>Help deliver clean water and avoid pollution!</p>
+        <h1>💧 Dropy: Clean Water Quest</h1>
+
+        <p>
+            Help bring clean water to communities around the world while avoiding pollution!
+        </p>
+
     </header>
 
     <section class="game-info">
+
         <h2>Score: <span id="score">0</span></h2>
+
+        <h2>Time Left: <span id="timer">30</span>s</h2>
+
+        <div class="difficulty-section">
+
+            <label for="difficulty">
+                Difficulty:
+            </label>
+
+            <select id="difficulty">
+
+                <option value="easy">
+                    Easy
+                </option>
+
+                <option value="normal" selected>
+                    Normal
+                </option>
+
+                <option value="hard">
+                    Hard
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <h3 id="milestone-display">
+            Reach 20 points for your first milestone!
+        </h3>
+
     </section>
 
     <main class="game-board">
 
         <div class="player">
+
             <img
                 src="img/water-can-transparent.png"
                 alt="Water Can"
                 id="player-image"
             >
+
         </div>
 
-        <button class="path" onclick="gainPoints()">
-            ➡️ Move Forward
+        <button class="path" onclick="gainPoints(this)">
+            💧 Deliver Water
         </button>
 
-        <button class="obstacle" onclick="losePoints()">
+        <button class="obstacle" onclick="losePoints(this)">
             🗑️ Avoid Trash
         </button>
 
-        <button class="obstacle" onclick="losePoints()">
+        <button class="obstacle" onclick="losePoints(this)">
             ☣️ Polluted Water
         </button>
 
@@ -49,15 +100,45 @@
             🚰 Reach Clean Water
         </button>
 
+        <div id="challenge-area"></div>
+
     </main>
 
     <div id="message">
-        💧 Click "Move Forward" to begin your journey!
+        💧 Click "Deliver Water" to begin helping communities.
     </div>
 
     <button class="reset-btn" onclick="resetGame()">
-        Restart Game
+        🔄 Restart Game
     </button>
+
+    <footer>
+
+        <h3>Learn More About charity: water</h3>
+
+        <p>
+            <a href="https://www.charitywater.org" target="_blank">
+                Official Website
+            </a>
+
+            |
+
+            <a href="https://www.charitywater.org/donate" target="_blank">
+                Donate
+            </a>
+        </p>
+
+    </footer>
+
+    <!-- SOUND EFFECTS -->
+
+    <audio id="clickSound" src="sounds/click.mp3"></audio>
+
+    <audio id="successSound" src="sounds/success.mp3"></audio>
+
+    <audio id="failSound" src="sounds/fail.mp3"></audio>
+
+    <audio id="winSound" src="sounds/win.mp3"></audio>
 
     <script src="script.js"></script>
 
