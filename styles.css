@@ -1,16 +1,12 @@
-/* Charity: water Brand Colors
+/* charity: water Colors
 
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
-
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+Yellow: #FFC907
+Blue: #2E9DF7
+Light Blue: #8BD1CB
+Green: #4FCB53
+Orange: #FF902A
+Red: #F5402C
+Dark Green: #159A48
 
 */
 
@@ -21,132 +17,305 @@ Secondary Colors:
 }
 
 body {
-    font-family: Arial, sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
     text-align: center;
-    background-color: #8BD1CB;
+
+    background: #8BD1CB;
+
     color: #333;
+
     padding: 20px;
 }
 
-/* HEADER */
+/* ---------- HEADER ---------- */
 
 header {
-    background-color: #FFC907;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-}
 
-.header-logo {
-    width: 250px;
-    max-width: 90%;
-    margin-bottom: 10px;
-}
+    background: #FFC907;
 
-header h1 {
-    margin-bottom: 10px;
-}
-
-/* SCORE */
-
-.game-info {
-    background-color: white;
-    max-width: 300px;
-    margin: 0 auto 20px;
-    padding: 15px;
-    border-radius: 12px;
-    color: #2E9DF7;
-    font-weight: bold;
-}
-
-/* GAME AREA */
-
-.game-board {
-    background-color: white;
-    max-width: 500px;
-    margin: auto;
     padding: 25px;
+
     border-radius: 15px;
 
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    margin-bottom: 25px;
 
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* PLAYER */
+.header-logo {
 
-.player {
+    width: 250px;
+
+    max-width: 90%;
+
     margin-bottom: 15px;
 }
 
+header h1 {
+
+    margin-bottom: 10px;
+
+    font-size: 2rem;
+}
+
+header p {
+
+    font-weight: 500;
+}
+
+/* ---------- INFO BOX ---------- */
+
+.game-info {
+
+    background: white;
+
+    max-width: 450px;
+
+    margin: auto;
+
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.game-info h2 {
+
+    margin-bottom: 10px;
+
+    color: #2E9DF7;
+}
+
+.difficulty-section {
+
+    margin: 15px 0;
+}
+
+#difficulty {
+
+    padding: 8px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    font-family: inherit;
+
+    font-weight: bold;
+}
+
+/* ---------- PROGRESS BAR ---------- */
+
+.progress-container {
+
+    width: 100%;
+
+    height: 20px;
+
+    background: #ddd;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    margin: 15px 0;
+}
+
+#progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #2E9DF7;
+
+    transition: width 0.4s ease;
+}
+
+#milestone-display {
+
+    color: #FF902A;
+
+    min-height: 40px;
+}
+
+/* ---------- GAME BOARD ---------- */
+
+.game-board {
+
+    background: white;
+
+    max-width: 550px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ---------- PLAYER ---------- */
+
+.player {
+
+    margin-bottom: 10px;
+}
+
 #player-image {
-    width: 120px;
+
+    width: 140px;
+
     transition: all 0.3s ease;
 }
 
-/* BUTTONS */
+/* ---------- BUTTONS ---------- */
 
 button {
-    padding: 12px 20px;
+
     border: none;
-    border-radius: 8px;
+
+    border-radius: 10px;
+
+    padding: 14px;
+
     font-size: 1rem;
+
+    font-weight: 700;
+
     cursor: pointer;
+
     transition: transform 0.2s ease;
 }
 
 button:hover {
+
     transform: scale(1.05);
 }
 
 .path {
-    background-color: #4FCB53;
+
+    background: #4FCB53;
+
     color: white;
 }
 
 .obstacle {
-    background-color: #F5402C;
+
+    background: #F5402C;
+
     color: white;
 }
 
 .goal {
-    background-color: #2E9DF7;
+
+    background: #2E9DF7;
+
     color: white;
-    font-weight: bold;
 }
 
 .reset-btn {
-    background-color: #FF902A;
-    color: white;
+
     margin-top: 20px;
-    font-weight: bold;
+
+    background: #FF902A;
+
+    color: white;
+
+    font-size: 1rem;
 }
 
-/* FEEDBACK */
+/* ---------- GENERATED CHALLENGES ---------- */
+
+#challenge-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+/* ---------- MESSAGE ---------- */
 
 #message {
+
     margin-top: 20px;
+
     font-size: 1.2rem;
+
     font-weight: bold;
-    min-height: 35px;
+
+    min-height: 50px;
+
     color: #159A48;
 }
 
-/* MOBILE */
+/* ---------- FOOTER ---------- */
+
+footer {
+
+    margin-top: 35px;
+
+    background: #FFC907;
+
+    padding: 20px;
+
+    border-radius: 15px;
+}
+
+footer h3 {
+
+    margin-bottom: 10px;
+}
+
+footer a {
+
+    text-decoration: none;
+
+    color: black;
+
+    font-weight: bold;
+}
+
+footer a:hover {
+
+    text-decoration: underline;
+}
+
+/* ---------- MOBILE ---------- */
 
 @media (max-width: 600px) {
 
     .game-board {
+
         width: 95%;
     }
 
     button {
+
         width: 100%;
     }
 
     .header-logo {
+
         width: 180px;
+    }
+
+    header h1 {
+
+        font-size: 1.5rem;
     }
 }
